@@ -1,7 +1,5 @@
 # Niconacho
 
-![Niconacho Logo](#)
-
 ## About
 
 **Nicolás Ignacio Torres López**  
