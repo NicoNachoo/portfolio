@@ -1,0 +1,28 @@
+---
+interface Props {
+    company: string;
+    location: string;
+    position: string;
+    details: string;
+    date: string;
+}
+
+const { company, location, position, details, date } = Astro.props;
+---
+
+<li class="mb-10 last:mb-0 me-6 pr-3 text-right">
+    <span
+        class="absolute flex items-center justify-center w-8 h-8 bg-gray-100 rounded-full -end-4 ring-4 ring-white dark:ring-gray-900 dark:bg-gray-700"
+    >
+        <slot name="icon" />
+    </span>
+    <h3 class="text-xl">
+        <p class="text-3xl">{company}</p>
+        <p class="text-lg text-blue-300">{date}</p>
+        <p class="text-red-300 text-lg">{location} | {position}</p>
+    </h3>
+    <hr class="my-2 w-4/5 place-self-end" />
+    <p class="text-sm text-balance">
+        {details}
+    </p>
+</li>

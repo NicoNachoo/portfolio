@@ -1,11 +1,106 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Badge from "../components/Badge.astro";
+import Layout from "../layouts/Layout.astro";
+import LinkedInIcon from "../icons/LinkedIn.astro";
+import GithubIcon from "../icons/Github.astro";
+import MailIcon from "../icons/Mail.astro";
+import BriefcaseIcon from "../icons/Briefcase.astro";
+import UserIcon from "../icons/User.astro";
+import CheckIcon from "../icons/Check.astro";
+import SocialPill from "../components/SocialPill.astro";
+import Timeline from "../components/Timeline.astro";
+import logo from "../assets/logo.png";
+import SectionContainer from "../components/SectionContainer.astro";
 ---
 
-<Layout>
-	<Welcome />
+<Layout
+    title="Niconacho's portfolio - Web Developer and Programmer with 8 years of experience"
+    description="Hire Niconacho, a web developer and programmer with 8 years of experience. Available to work. From Valparaíso, Chile."
+>
+    <main class="w-full flex items-end flex-col">
+        <section class="xl:w-1/3 px-8 py-10 xl:p-5 xl:pt-0 xl:pr-0 xl:fixed xl:bottom-0 xl:left-0">
+            <img
+                class="mx-auto lg:mx-0 rounded-full size-16 p-1 mb-6 ring-2 ring-gray-300 dark:ring-gray-500 xl:hover:scale-125 hover:scale-150 transition-transform"
+                src={logo.src}
+                alt="Niconacho logo"
+            />
+            <h1 class="text-white text-4xl xl:text-5xl font-bold flex flex-row gap-x-4 pb-3">
+                Niconacho
+                <a
+                    target="_blank"
+                    href="https://www.linkedin.com/in/niconacho/"
+                    rel="noopener noreferrer"
+                    class="flex justify-center items-center"
+                >
+                    <Badge><CheckIcon class="size-5" /> Available to work</Badge>
+                </a>
+            </h1>
+            <h2 class="text-xl xl:text-2xl text-balance">
+                <span>+7 years of experience.</span>
+                <span class="text-blue-300"> Frontend Developer.</span>
+                <span class="text-red-300"> From Valparaíso, Chile.</span>
+            </h2>
+
+            <nav class="flex lg:flex-row gap-5 mt-8 flex-col">
+                <SocialPill href="https://www.linkedin.com/in/niconacho/">
+                    <LinkedInIcon class="size-6" />
+                    LinkedIn
+                </SocialPill>
+                <SocialPill href="https://www.github.com/niconachoo">
+                    <GithubIcon class="size-6" />
+                    GitHub
+                </SocialPill>
+                <SocialPill href="mailto:nico.torres.lopez@gmail.com">
+                    <MailIcon class="size-6" />
+                    nico.torres.lopez@gmail.com
+                </SocialPill>
+            </nav>
+        </section>
+        <SectionContainer id="experience" title="Experience" Icon={BriefcaseIcon}>
+            <Timeline />
+        </SectionContainer>
+        <SectionContainer id="about" class="xl:pb-40" title="About me" Icon={UserIcon}>
+            <div class="opacity-80">
+                <p class="text-right text-pretty mb-4">
+                    My name is <span class="font-extrabold">Nicolás Ignacio Torres López</span>, and
+                    I am a passionate software developer from Valparaíso, Chile. With over 7 years
+                    of professional experience in software development, I specialize in web and API
+                    development, both on the frontend and backend, working with a variety of modern
+                    technologies and frameworks.
+                </p>
+                <p class="text-right text-pretty mb-4">
+                    Throughout my career, I have contributed to diverse projects in reputable
+                    companies, gaining hands-on experience with tools like React, PHP (Laravel, Yii,
+                    Zend), Ruby on Rails, Docker, PostgreSQL, and more. My expertise extends to
+                    UX/UI design collaboration using Figma and efficient task management through
+                    platforms like Jira, Trello, and Shortcut.
+                </p>
+                <p class="text-right text-pretty mb-4">
+                    As a professional, I am recognized for my honesty, responsibility, and eagerness
+                    to learn. My straightforward communication and motivation to solve challenges
+                    have helped me deliver impactful solutions that meet user and business needs.
+                </p>
+                <p class="text-right text-pretty mb-4">
+                    I hold a Computer Science degree from Universidad Técnica Federico Santa María
+                    and have also served as a Teaching Assistant in software development and
+                    programming languages courses.
+                </p>
+                <p class="text-right text-pretty mb-4">
+                    I am fluent in Spanish (native) and proficient in English (B2 level), enabling
+                    me to collaborate effectively in diverse, international teams.
+                </p>
+                <p class="text-right text-pretty mb-4">
+                    In my spare time, I enjoy activities that challenge me both physically and
+                    mentally, like handball, where I was the college team goalkeeper for four years.
+                    My academic thesis focused on educational psychology, which highlights my
+                    interest in leveraging technology for learning and development.
+                </p>
+            </div>
+        </SectionContainer>
+        <div class="xl:h-20 mx-8 xl:mx-20 xl:mt-32">
+            <p class="text-2xl text-right text-pretty mb-4">
+                Let’s connect and work together on innovative projects that make a difference!
+            </p>
+        </div>
+    </main>
 </Layout>
