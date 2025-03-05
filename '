@@ -14,7 +14,6 @@ const EXPERIENCE = [
         details:
             "Web development with PHP,Yii framework, Git for version control and Trello to manage tasks.",
         icon: BetterflyIcon,
-        url: "https://betterfly.com",
     },
     {
         company: "Uber",
@@ -24,7 +23,6 @@ const EXPERIENCE = [
         details:
             "Web development with React and Fusion.js, Figma for UX-UI, Git for version control and Jira to manage tasks.",
         icon: UberIcon,
-        url: "https://uber.com",
     },
     {
         company: "Cornershop by Uber",
@@ -43,7 +41,6 @@ const EXPERIENCE = [
         details:
             "Web and API development with PHP and Ruby - Laravel framework, Ruby on Rails, Docker, PostgreSQL, version control with GitLabs and Jira to manage tasks.",
         icon: CompanyDefaultIcon,
-        url: "https://www.trust.lat/",
     },
     {
         company: "Jumpitt Labs",
@@ -79,7 +76,6 @@ const EXPERIENCE = [
         details: "Nearway app support, MySQL and customer service.",
         date: "August 2018 - November 2018",
         icon: CompanyDefaultIcon,
-        url: "https://www.nearway.com/",
     },
     {
         company: "Adnet Consulting",
@@ -89,13 +85,11 @@ const EXPERIENCE = [
         details:
             "Web development with C# - .NET Core, Angular 4, Mysql, Oracle and version control with BitBucket.",
         icon: CompanyDefaultIcon,
-        url: "https://www.adnet.cl/",
     },
 ];
 ---
 
-<ol class="relative border-e border-black mt-2">
-    <div class="absolute top-0 right-0 w-4 h-4 bg-black rounded-full -end-2"></div>
+<ol class="relative text-white-400 border-e border-black text-white-500 opacity-90">
     {
         EXPERIENCE.map((experience) => (
             <TimelineItem
@@ -104,11 +98,9 @@ const EXPERIENCE = [
                 position={experience.position}
                 details={experience.details}
                 date={experience.date}
-                url={experience.url}
             >
                 <experience.icon slot="icon" class="size-8 text-black" />
             </TimelineItem>
         ))
     }
-    <div class="absolute bottom-0 right-0 w-6 h-1 rounded-3xl bg-black -me-3"></div>
 </ol>

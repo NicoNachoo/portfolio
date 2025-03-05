@@ -4,8 +4,6 @@ import Layout from "../layouts/Layout.astro";
 import LinkedInIcon from "../icons/LinkedIn.astro";
 import GithubIcon from "../icons/Github.astro";
 import MailIcon from "../icons/Mail.astro";
-import BriefcaseIcon from "../icons/Briefcase.astro";
-import UserIcon from "../icons/User.astro";
 import CheckIcon from "../icons/Check.astro";
 import SocialPill from "../components/SocialPill.astro";
 import Timeline from "../components/Timeline.astro";
@@ -13,33 +11,51 @@ import logo from "../assets/logo.png";
 import SectionContainer from "../components/SectionContainer.astro";
 ---
 
+<style>
+    .nice-shadow {
+        transition-property: all;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        transition-duration: 0.15s;
+        --tw-shadow: 6px 6px 0px 0px black;
+    }
+    .nice-shadow-hoverable:hover {
+        --tw-shadow: 0px 0px 0px 0px black;
+        transform: translate(6px, 6px) rotate(0deg) skewX(0deg) skewY(0deg) scaleX(1) scaleY(1);
+    }
+</style>
+
 <Layout
     title="Niconacho's portfolio - Web Developer and Programmer with 8 years of experience"
     description="Hire Niconacho, a web developer and programmer with 8 years of experience. Available to work. From Valparaíso, Chile."
 >
     <main class="w-full flex items-center xl:items-end flex-col">
         <section class="xl:w-1/3 px-8 py-10 xl:p-5 xl:pt-0 xl:pr-0 xl:fixed xl:bottom-0 xl:left-0">
-            <img
-                class="mx-auto lg:mx-0 rounded-full size-16 p-1 mb-6 ring-2 ring-gray-300 dark:ring-gray-500 xl:hover:scale-125 hover:scale-150 transition-transform"
-                src={logo.src}
-                alt="Niconacho logo"
-            />
-            <h1 class="text-white text-4xl xl:text-5xl font-bold flex flex-row gap-x-4 pb-3">
-                Niconacho
-                <a
-                    target="_blank"
-                    href="https://www.linkedin.com/in/niconacho/"
-                    rel="noopener noreferrer"
-                    class="flex justify-center items-center"
-                >
-                    <Badge><CheckIcon class="size-5" /> Available to work</Badge>
-                </a>
-            </h1>
-            <h2 class="text-xl xl:text-2xl text-balance">
-                <span>+7 years of experience.</span>
-                <span class="text-blue-300"> Frontend Developer.</span>
-                <span class="text-red-300"> From Valparaíso, Chile.</span>
-            </h2>
+            <div
+                class="flex flex-row items-center gap-x-8 shadow-lg nice-shadow rounded-xl border-2 border-black p-8 bg-[#FCD7D7]"
+            >
+                <div class="flex flex-col items-center">
+                    <img
+                        class="mb-4 lg:mx-0 rounded-xl size-28 shadow-lg nice-shadow border-2 border-black"
+                        src={logo.src}
+                        alt="Niconacho logo"
+                    />
+                    <h1 class="text-3xl font-extrabold pb-3">
+                        @Niconacho
+                        <a
+                            target="_blank"
+                            href="https://www.linkedin.com/in/niconacho/"
+                            rel="noopener noreferrer"
+                            class="flex justify-center items-center"
+                        >
+                        </a>
+                    </h1>
+                </div>
+                <h2 class="text-xl xl:text-2xl text-balance">
+                    <span>+7 years of experience.</span>
+                    <span class="text-blue-400"> Frontend Developer.</span>
+                    <span class="text-[#FF6B6B]"> From Valparaíso, Chile.</span>
+                </h2>
+            </div>
 
             <nav class="flex lg:flex-row gap-5 mt-8 flex-col">
                 <SocialPill href="https://www.linkedin.com/in/niconacho/">
@@ -56,49 +72,52 @@ import SectionContainer from "../components/SectionContainer.astro";
                 </SocialPill>
             </nav>
         </section>
-        <SectionContainer id="experience" title="Experience" Icon={BriefcaseIcon}>
+        <SectionContainer id="experience" title="Experience">
             <Timeline />
         </SectionContainer>
-        <SectionContainer id="about" class="xl:pb-40" title="About me" Icon={UserIcon}>
-            <div class="opacity-80">
-                <p class="text-right text-pretty mb-4">
-                    My name is <span class="font-extrabold">Nicolás Ignacio Torres López</span>, and
-                    I am a passionate software developer from Valparaíso, Chile. With over 7 years
-                    of professional experience in software development, I specialize in web and API
-                    development, both on the frontend and backend, working with a variety of modern
-                    technologies and frameworks.
+        <SectionContainer id="about" class="mb-6" title="About me">
+            <div
+                class="opacity-80 mt-2 rounded-xl shadow-lg nice-shadow border-2 border-black p-8 bg-[#FCD7D7]"
+            >
+                <p class="text-pretty mb-4">
+                    Hey, I'm <span class="font-extrabold">Nicolás Ignacio Torres López</span> 👋 I'm
+                    a software developer based in the vibrant Valparaíso, Chile 🇨🇱. For over 7 years,
+                    I've been immersed in the world of software development 💻, focusing on building
+                    web apps and APIs, both frontend and backend, using a variety of modern tech and
+                    frameworks.
                 </p>
-                <p class="text-right text-pretty mb-4">
-                    Throughout my career, I have contributed to diverse projects in reputable
-                    companies, gaining hands-on experience with tools like React, PHP (Laravel, Yii,
-                    Zend), Ruby on Rails, Docker, PostgreSQL, and more. My expertise extends to
-                    UX/UI design collaboration using Figma and efficient task management through
-                    platforms like Jira, Trello, and Shortcut.
+                <p class="text-pretty mb-4">
+                    Throughout my career, I've contributed to diverse projects at reputable
+                    companies 🏢, gaining hands-on experience with tools like React, PHP (Laravel,
+                    Yii, Zend), Ruby on Rails, Docker, PostgreSQL, and more. I also collaborate on
+                    UX/UI design using Figma and keep projects on track with platforms like Jira,
+                    Trello, and Shortcut.
                 </p>
-                <p class="text-right text-pretty mb-4">
-                    As a professional, I am recognized for my honesty, responsibility, and eagerness
-                    to learn. My straightforward communication and motivation to solve challenges
-                    have helped me deliver impactful solutions that meet user and business needs.
+                <p class="text-pretty mb-4">
+                    As a professional, I value honesty, responsibility, and a constant drive to
+                    learn ✨. I communicate directly and am highly motivated to solve problems 💪,
+                    always striving to deliver impactful solutions that meet both user and business
+                    needs.
                 </p>
-                <p class="text-right text-pretty mb-4">
+                <p class="text-pretty mb-4">
                     I hold a Computer Science degree from Universidad Técnica Federico Santa María
-                    and have also served as a Teaching Assistant in software development and
-                    programming languages courses.
+                    🎓, and I've also enjoyed being a Teaching Assistant for software development
+                    and programming languages courses.
                 </p>
-                <p class="text-right text-pretty mb-4">
-                    I am fluent in Spanish (native) and proficient in English (B2 level), enabling
-                    me to collaborate effectively in diverse, international teams.
+                <p class="text-pretty mb-4">
+                    I'm fluent in Spanish (native) 🗣️ and proficient in English (B2 level), which
+                    allows me to collaborate effectively with international teams.
                 </p>
-                <p class="text-right text-pretty mb-4">
-                    In my spare time, I enjoy activities that challenge me both physically and
-                    mentally, like handball, where I was the college team goalkeeper for four years.
-                    My academic thesis focused on educational psychology, which highlights my
-                    interest in leveraging technology for learning and development.
+                <p class="text-pretty mb-4">
+                    When I'm not coding, I enjoy activities that challenge me physically and
+                    mentally. I was the goalkeeper for my college handball team for four years 🥅.
+                    My academic thesis focused on educational psychology, reflecting my passion for
+                    leveraging technology in learning and development 🧠.
                 </p>
             </div>
         </SectionContainer>
         <div class="xl:w-1/2 mx-8 xl:mx-20 xl:mt-10">
-            <p class="text-xl text-right text-pretty mb-4">
+            <p class="text-xl xl:text-right text-center mb-4">
                 Let’s connect and work together on innovative projects that make a difference!
             </p>
         </div>

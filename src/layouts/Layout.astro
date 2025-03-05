@@ -18,33 +18,32 @@ const { title, description } = Astro.props;
         <meta name="description" content={description} />
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         <meta name="generator" content={Astro.generator} />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+            rel="stylesheet"
+        />
         <title>{title}</title>
     </head>
     <body>
-        <div class="hidden fixed left-0 top-0 -z-10 h-full w-full">
-            <div
-                class="absolute top-0 z-[-2] h-screen w-screen bg-white bg-[radial-gradient(100%_50%_at_50%_0%,rgba(0,163,255,0.13)_0,rgba(0,163,255,0)_50%,rgba(0,163,255,0)_100%)]"
-            >
-            </div>
-        </div>
-        <div class="fixed left-0 top-0 -z-10 h-full w-full">
-            <div
-                class="absolute top-0 z-[-2] h-screen w-screen bg-neutral-950 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"
-            >
-            </div>
-        </div>
         <Header />
         <slot />
     </body>
 </html>
 
 <style>
-    :root {
-        color-scheme: light dark;
-    }
     html {
-        font-family: "Onest Variable", system-ui, sans-serif;
+        font-family: "Public Sans", sans-serif;
         scroll-behavior: smooth;
+        font-weight: bold;
+        background: repeating-linear-gradient(
+            45deg,
+            #fcd2d2 0,
+            #fcd2d2 10px,
+            #fcd7d7 10px,
+            #fcd7d7 20px
+        );
     }
     body {
         display: flex;
