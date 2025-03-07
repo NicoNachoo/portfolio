@@ -9,25 +9,12 @@ import logo from "../assets/logo.png";
 import SectionContainer from "../components/SectionContainer.astro";
 ---
 
-<style>
-    .nice-shadow {
-        transition-property: all;
-        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-        transition-duration: 0.15s;
-        --tw-shadow: 6px 6px 0px 0px black;
-    }
-    .nice-shadow-hoverable:hover {
-        --tw-shadow: 0px 0px 0px 0px black;
-        transform: translate(6px, 6px) rotate(0deg) skewX(0deg) skewY(0deg) scaleX(1) scaleY(1);
-    }
-</style>
-
 <Layout
     title="Niconacho's portfolio - Web Developer and Programmer with 8 years of experience"
     description="Hire Niconacho, a web developer and programmer with 8 years of experience. Available to work. From Valparaíso, Chile."
 >
-    <main class="w-full flex items-center xl:items-end flex-col">
-        <section class="xl:w-1/3 px-8 py-10 xl:p-5 xl:pt-0 xl:pr-0 xl:fixed xl:bottom-0 xl:left-0">
+    <main class="w-full flex items-center xl:items-end flex-col p-8">
+        <section class="xl:w-1/3 px-8 py-10 xl:p-8 xl:pt-0 xl:pr-0 xl:fixed xl:bottom-0 xl:left-0">
             <div
                 class="flex flex-row items-center gap-x-8 shadow-lg nice-shadow rounded-xl border-2 border-black p-8 bg-[#FCD7D7]"
             >
@@ -115,7 +102,7 @@ import SectionContainer from "../components/SectionContainer.astro";
             </div>
         </SectionContainer>
         <div class="xl:w-1/2 mx-8 xl:mx-20 xl:mt-10">
-            <p class="text-xl xl:text-right text-center mb-4">
+            <p class="text-xl xl:text-right text-center">
                 Let’s connect and work together on innovative projects that make a difference!
             </p>
         </div>

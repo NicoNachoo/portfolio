@@ -1,6 +1,7 @@
 ---
 import "@fontsource-variable/onest";
 import Header from "../components/Header.astro";
+import "../styles/global.css";
 
 interface Props {
     title: string;
@@ -24,6 +25,7 @@ const { title, description } = Astro.props;
             href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap"
             rel="stylesheet"
         />
+        <link rel="stylesheet" href="../layout.css" />
         <title>{title}</title>
     </head>
     <body>
@@ -31,29 +33,3 @@ const { title, description } = Astro.props;
         <slot />
     </body>
 </html>
-
-<style>
-    html {
-        font-family: "Public Sans", sans-serif;
-        scroll-behavior: smooth;
-        font-weight: bold;
-        background: repeating-linear-gradient(
-            45deg,
-            #fcd2d2 0,
-            #fcd2d2 10px,
-            #fcd7d7 10px,
-            #fcd7d7 20px
-        );
-    }
-    body {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        min-height: 100vh;
-    }
-    @media (prefers-reduced-motion: reduce) {
-        html {
-            scroll-behavior: auto;
-        }
-    }
-</style>

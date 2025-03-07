@@ -1,0 +1,70 @@
+html {
+    font-family: "Public Sans", sans-serif;
+    scroll-behavior: smooth;
+    font-weight: bold;
+    background: repeating-linear-gradient(45deg,
+            #fcd2d2 0,
+            #fcd2d2 10px,
+            #fcd7d7 10px,
+            #fcd7d7 20px);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+}
+
+.nice-shadow {
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 0.15s;
+    --tw-shadow: 6px 6px 0px 0px black;
+}
+
+.nice-shadow-hoverable:hover {
+    --tw-shadow: 0px 0px 0px 0px black;
+    transform: translate(6px, 6px) rotate(0deg) skewX(0deg) skewY(0deg) scaleX(1) scaleY(1);
+}
+
+.underlined-text {
+    position: relative;
+    /* Needed for positioning the pseudo-element */
+    text-decoration: none;
+    /* Remove default underline */
+    display: inline-block;
+    /* Crucial for width calculation */
+}
+
+.underlined-text::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    left: 0;
+    bottom: -2px;
+    /* Adjust for underline thickness and position */
+    width: 100%;
+    height: 2px;
+    /* Underline thickness */
+    /* not quite black */
+    background-color: #333;
+    /* Underline color */
+    transform: scaleX(0);
+    /* Initially hidden */
+    transform-origin: left;
+    /* Grow from the left */
+    transition: transform 0.3s ease-in-out;
+    /* Animation properties */
+}
+
+.underlined-text:hover::after {
+    transform: scaleX(1);
+    /* Fully visible on hover */
+}

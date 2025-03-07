@@ -1,29 +1,18 @@
 ---
+import type { AstroComponentFactory } from "astro/types";
 import WebIcon from "../icons/Web.astro";
+
 interface Props {
     company: string;
     location: string;
     position: string;
-    details: string;
+    details: AstroComponentFactory[];
     date: string;
     url?: string;
 }
 
 const { company, location, position, details, date, url } = Astro.props;
 ---
-
-<style>
-    .nice-shadow {
-        transition-property: all;
-        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-        transition-duration: 0.15s;
-        --tw-shadow: 6px 6px 0px 0px black;
-    }
-    .nice-shadow-hoverable:hover {
-        --tw-shadow: 0px 0px 0px 0px black;
-        transform: translate(6px, 6px) rotate(0deg) skewX(0deg) skewY(0deg) scaleX(1) scaleY(1);
-    }
-</style>
 
 <li class="my-10 last:mb-0 me-10 flex items-center">
     <span
@@ -53,8 +42,13 @@ const { company, location, position, details, date, url } = Astro.props;
             }
         </div>
         <hr class="border-black my-2 w-full" />
-        <p class="text-sm text-balance">
-            {details}
-        </p>
+        <div
+            class="flex flex-col p-3 nice-shadow shadow-lg border-2 border-black font-extrabold bg-[#161616]"
+        >
+            <p class="text-lg text-white mb-4">Technologies used:</p>
+            <div class="flex items-center gap-x-4 w-full">
+                {details.map((Icon) => <Icon class="size-8" />)}
+            </div>
+        </div>
     </div>
 </li>

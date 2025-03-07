@@ -1,9 +1,19 @@
 ---
-import BetterflyIcon from "../icons/Betterfly.astro";
-import UberIcon from "../icons/Uber.astro";
-import CornershopIcon from "../icons/Cornershop.astro";
-import CompanyDefaultIcon from "../icons/CompanyDefault.astro";
+import BetterflyIcon from "@icons/Betterfly.astro";
+import UberIcon from "@icons/Uber.astro";
+import CornershopIcon from "@icons/Cornershop.astro";
+import CompanyDefaultIcon from "@icons/CompanyDefault.astro";
 import TimelineItem from "./TimelineItem.astro";
+import PhpIcon from "@icons/Php.astro";
+import GitIcon from "@icons/Git.astro";
+import TrelloIcon from "@icons/Trello.astro";
+import ReactIcon from "@icons/React.astro";
+import FigmaIcon from "@icons/Figma.astro";
+import JiraIcon from "@icons/Jira.astro";
+import RubyIcon from "@icons/Ruby.astro";
+import LaravelIcon from "@icons/Laravel.astro";
+import DockerIcon from "@icons/Docker.astro";
+import PostgresIcon from "@icons/PostgreSQL.astro";
 
 const EXPERIENCE = [
     {
@@ -11,8 +21,7 @@ const EXPERIENCE = [
         date: "January 2024 - Now",
         location: "Santiago, Chile",
         position: "Full-stack engineer",
-        details:
-            "Web development with PHP,Yii framework, Git for version control and Trello to manage tasks.",
+        details: [PhpIcon, GitIcon, TrelloIcon],
         icon: BetterflyIcon,
         url: "https://betterfly.com",
     },
@@ -21,8 +30,7 @@ const EXPERIENCE = [
         location: "Santiago, Chile",
         position: "Frontend engineer",
         date: "September 2022 - December 2023",
-        details:
-            "Web development with React and Fusion.js, Figma for UX-UI, Git for version control and Jira to manage tasks.",
+        details: [ReactIcon, FigmaIcon, GitIcon, JiraIcon],
         icon: UberIcon,
         url: "https://uber.com",
     },
@@ -31,8 +39,7 @@ const EXPERIENCE = [
         location: "Santiago, Chile",
         position: "Frontend engineer",
         date: "April 2021 - September 2022",
-        details:
-            "Web development with React, Figma for UX-UI, version control with Git and Shortcut(ex Clubhouse) to manage tasks.",
+        details: [ReactIcon, FigmaIcon, GitIcon, JiraIcon],
         icon: CornershopIcon,
     },
     {
@@ -40,8 +47,7 @@ const EXPERIENCE = [
         location: "Valparaíso, Chile",
         position: "Fullstack developer",
         date: "May 2020 - January 2021",
-        details:
-            "Web and API development with PHP and Ruby - Laravel framework, Ruby on Rails, Docker, PostgreSQL, version control with GitLabs and Jira to manage tasks.",
+        details: [PhpIcon, RubyIcon, LaravelIcon, DockerIcon, PostgresIcon, GitIcon, JiraIcon],
         icon: CompanyDefaultIcon,
         url: "https://www.trust.lat/",
     },
@@ -50,8 +56,8 @@ const EXPERIENCE = [
         location: "Valparaíso, Chile",
         position: "Fullstack developer",
         date: "June 2019 - May 2020",
-        details:
-            "Web and API development with PHP - Laravel framework, PostgreSQL, version control with GitLabs and Jira to manage tasks.",
+        details: [],
+        // "Web and API development with PHP - Laravel framework, PostgreSQL, version control with GitLabs and Jira to manage tasks.",
         icon: CompanyDefaultIcon,
     },
     {
@@ -59,8 +65,8 @@ const EXPERIENCE = [
         location: "Concón, Chile",
         position: "Systems engineer",
         date: "April 2019 - May 2019",
-        details:
-            "Web development with Java - Spring framework, MariaDB and version control with GitHub.",
+        details: [],
+        // "Web development with Java - Spring framework, MariaDB and version control with GitHub.",
         icon: CompanyDefaultIcon,
     },
     {
@@ -68,15 +74,16 @@ const EXPERIENCE = [
         location: "Villa alemana, Chile",
         position: "Web developer",
         date: "November 2018 - April 2019",
-        details:
-            "Web development with PHP - Zend framework, MySQL and version control with GitHub.",
+        details: [],
+        // "Web development with PHP - Zend framework, MySQL and version control with GitHub.",
         icon: CompanyDefaultIcon,
     },
     {
         company: "Nearway Spa",
         location: "Viña del mar, Chile",
         position: "Operations Agent",
-        details: "Nearway app support, MySQL and customer service.",
+        details: [],
+        // "Nearway app support, MySQL and customer service.",
         date: "August 2018 - November 2018",
         icon: CompanyDefaultIcon,
         url: "https://www.nearway.com/",
@@ -86,8 +93,8 @@ const EXPERIENCE = [
         location: "Santiago, Chile",
         position: "Web developer",
         date: "May 2017 - July 2018",
-        details:
-            "Web development with C# - .NET Core, Angular 4, Mysql, Oracle and version control with BitBucket.",
+        details: [],
+        // "Web development with C# - .NET Core, Angular 4, Mysql, Oracle and version control with BitBucket.",
         icon: CompanyDefaultIcon,
         url: "https://www.adnet.cl/",
     },
