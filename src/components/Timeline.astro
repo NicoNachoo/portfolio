@@ -1,19 +1,32 @@
 ---
-import BetterflyIcon from "@icons/Betterfly.astro";
-import UberIcon from "@icons/Uber.astro";
-import CornershopIcon from "@icons/Cornershop.astro";
-import CompanyDefaultIcon from "@icons/CompanyDefault.astro";
 import TimelineItem from "./TimelineItem.astro";
-import PhpIcon from "@icons/Php.astro";
-import GitIcon from "@icons/Git.astro";
-import TrelloIcon from "@icons/Trello.astro";
-import ReactIcon from "@icons/React.astro";
-import FigmaIcon from "@icons/Figma.astro";
-import JiraIcon from "@icons/Jira.astro";
-import RubyIcon from "@icons/Ruby.astro";
-import LaravelIcon from "@icons/Laravel.astro";
-import DockerIcon from "@icons/Docker.astro";
-import PostgresIcon from "@icons/PostgreSQL.astro";
+import {
+    BetterflyIcon,
+    UberIcon,
+    CornershopIcon,
+    CompanyDefaultIcon,
+    PhpIcon,
+    GitIcon,
+    TrelloIcon,
+    ReactIcon,
+    FigmaIcon,
+    JiraIcon,
+    RubyIcon,
+    LaravelIcon,
+    DockerIcon,
+    PostgresIcon,
+    JavaIcon,
+    SpringIcon,
+    MariaDBIcon,
+    ZendIcon,
+    MySQLIcon,
+    PowerBIIcon,
+    CSharpIcon,
+    DotNetCoreIcon,
+    AngularIcon,
+    OracleIcon,
+    BitBucketIcon,
+} from "@icons/index.astro";
 
 const EXPERIENCE = [
     {
@@ -21,7 +34,29 @@ const EXPERIENCE = [
         date: "January 2024 - Now",
         location: "Santiago, Chile",
         position: "Full-stack engineer",
-        details: [PhpIcon, GitIcon, TrelloIcon],
+        details: [
+            {
+                Icon: PhpIcon,
+                tooltip: "PHP",
+            },
+
+            {
+                Icon: GitIcon,
+                tooltip: "Git",
+            },
+            {
+                Icon: TrelloIcon,
+                tooltip: "Trello",
+            },
+            {
+                Icon: FigmaIcon,
+                tooltip: "Figma",
+            },
+            {
+                Icon: MySQLIcon,
+                tooltip: "MySQL",
+            },
+        ],
         icon: BetterflyIcon,
         url: "https://betterfly.com",
     },
@@ -30,7 +65,24 @@ const EXPERIENCE = [
         location: "Santiago, Chile",
         position: "Frontend engineer",
         date: "September 2022 - December 2023",
-        details: [ReactIcon, FigmaIcon, GitIcon, JiraIcon],
+        details: [
+            {
+                Icon: ReactIcon,
+                tooltip: "React",
+            },
+            {
+                Icon: FigmaIcon,
+                tooltip: "Figma",
+            },
+            {
+                Icon: GitIcon,
+                tooltip: "Git",
+            },
+            {
+                Icon: JiraIcon,
+                tooltip: "Jira",
+            },
+        ],
         icon: UberIcon,
         url: "https://uber.com",
     },
@@ -39,7 +91,24 @@ const EXPERIENCE = [
         location: "Santiago, Chile",
         position: "Frontend engineer",
         date: "April 2021 - September 2022",
-        details: [ReactIcon, FigmaIcon, GitIcon, JiraIcon],
+        details: [
+            {
+                Icon: ReactIcon,
+                tooltip: "React",
+            },
+            {
+                Icon: FigmaIcon,
+                tooltip: "Figma",
+            },
+            {
+                Icon: GitIcon,
+                tooltip: "Git",
+            },
+            {
+                Icon: JiraIcon,
+                tooltip: "Jira",
+            },
+        ],
         icon: CornershopIcon,
     },
     {
@@ -47,7 +116,36 @@ const EXPERIENCE = [
         location: "Valparaíso, Chile",
         position: "Fullstack developer",
         date: "May 2020 - January 2021",
-        details: [PhpIcon, RubyIcon, LaravelIcon, DockerIcon, PostgresIcon, GitIcon, JiraIcon],
+        details: [
+            {
+                Icon: PhpIcon,
+                tooltip: "PHP",
+            },
+            {
+                Icon: RubyIcon,
+                tooltip: "Ruby",
+            },
+            {
+                Icon: LaravelIcon,
+                tooltip: "Laravel",
+            },
+            {
+                Icon: DockerIcon,
+                tooltip: "Docker",
+            },
+            {
+                Icon: PostgresIcon,
+                tooltip: "Postgres",
+            },
+            {
+                Icon: GitIcon,
+                tooltip: "Git",
+            },
+            {
+                Icon: JiraIcon,
+                tooltip: "Jira",
+            },
+        ],
         icon: CompanyDefaultIcon,
         url: "https://www.trust.lat/",
     },
@@ -56,8 +154,32 @@ const EXPERIENCE = [
         location: "Valparaíso, Chile",
         position: "Fullstack developer",
         date: "June 2019 - May 2020",
-        details: [],
-        // "Web and API development with PHP - Laravel framework, PostgreSQL, version control with GitLabs and Jira to manage tasks.",
+        details: [
+            {
+                Icon: PhpIcon,
+                tooltip: "PHP",
+            },
+            {
+                Icon: LaravelIcon,
+                tooltip: "Laravel",
+            },
+            {
+                Icon: DockerIcon,
+                tooltip: "Docker",
+            },
+            {
+                Icon: PostgresIcon,
+                tooltip: "Postgres",
+            },
+            {
+                Icon: GitIcon,
+                tooltip: "Git",
+            },
+            {
+                Icon: JiraIcon,
+                tooltip: "Jira",
+            },
+        ],
         icon: CompanyDefaultIcon,
     },
     {
@@ -65,8 +187,24 @@ const EXPERIENCE = [
         location: "Concón, Chile",
         position: "Systems engineer",
         date: "April 2019 - May 2019",
-        details: [],
-        // "Web development with Java - Spring framework, MariaDB and version control with GitHub.",
+        details: [
+            {
+                Icon: JavaIcon,
+                tooltip: "Java",
+            },
+            {
+                Icon: SpringIcon,
+                tooltip: "Spring",
+            },
+            {
+                Icon: MariaDBIcon,
+                tooltip: "MariaDB",
+            },
+            {
+                Icon: GitIcon,
+                tooltip: "Git",
+            },
+        ],
         icon: CompanyDefaultIcon,
     },
     {
@@ -74,16 +212,40 @@ const EXPERIENCE = [
         location: "Villa alemana, Chile",
         position: "Web developer",
         date: "November 2018 - April 2019",
-        details: [],
-        // "Web development with PHP - Zend framework, MySQL and version control with GitHub.",
+        details: [
+            {
+                Icon: PhpIcon,
+                tooltip: "PHP",
+            },
+            {
+                Icon: ZendIcon,
+                tooltip: "Zend",
+            },
+            {
+                Icon: MySQLIcon,
+                tooltip: "MySQL",
+            },
+            {
+                Icon: GitIcon,
+                tooltip: "Git",
+            },
+        ],
         icon: CompanyDefaultIcon,
     },
     {
         company: "Nearway Spa",
         location: "Viña del mar, Chile",
         position: "Operations Agent",
-        details: [],
-        // "Nearway app support, MySQL and customer service.",
+        details: [
+            {
+                Icon: MySQLIcon,
+                tooltip: "MySQL",
+            },
+            {
+                Icon: PowerBIIcon,
+                tooltip: "PowerBI",
+            },
+        ],
         date: "August 2018 - November 2018",
         icon: CompanyDefaultIcon,
         url: "https://www.nearway.com/",
@@ -93,7 +255,32 @@ const EXPERIENCE = [
         location: "Santiago, Chile",
         position: "Web developer",
         date: "May 2017 - July 2018",
-        details: [],
+        details: [
+            {
+                Icon: CSharpIcon,
+                tooltip: "C#",
+            },
+            {
+                Icon: DotNetCoreIcon,
+                tooltip: ".NET Core",
+            },
+            {
+                Icon: AngularIcon,
+                tooltip: "Angular",
+            },
+            {
+                Icon: MySQLIcon,
+                tooltip: "MySQL",
+            },
+            {
+                Icon: OracleIcon,
+                tooltip: "Oracle",
+            },
+            {
+                Icon: BitBucketIcon,
+                tooltip: "BitBucket",
+            },
+        ],
         // "Web development with C# - .NET Core, Angular 4, Mysql, Oracle and version control with BitBucket.",
         icon: CompanyDefaultIcon,
         url: "https://www.adnet.cl/",
@@ -101,7 +288,7 @@ const EXPERIENCE = [
 ];
 ---
 
-<ol class="relative border-e border-black mt-2">
+<ol class="relative border-e border-black mt-2 mr-8">
     <div class="absolute top-0 right-0 w-4 h-4 bg-black rounded-full -me-2"></div>
     {
         EXPERIENCE.map((experience) => (

@@ -1,12 +1,13 @@
 ---
-import type { AstroComponentFactory } from "astro/types";
+import type { AstroComponentFactory } from "astro/runtime/server/index.js";
 import WebIcon from "../icons/Web.astro";
+import Tooltip from "../components/Tooltip.astro";
 
 interface Props {
     company: string;
     location: string;
     position: string;
-    details: AstroComponentFactory[];
+    details: [{ Icon: AstroComponentFactory; tooltip: string }];
     date: string;
     url?: string;
 }
@@ -32,6 +33,7 @@ const { company, location, position, details, date, url } = Astro.props;
             {
                 url && (
                     <a
+                        aria-label={`${company} website`}
                         href={url}
                         target="_blank"
                         class="text-center p-1 nice-shadow nice-shadow-hoverable shadow-lg rounded-full border-2 border-black text-sm font-light bg-[#FF6B6B]"
@@ -43,11 +45,17 @@ const { company, location, position, details, date, url } = Astro.props;
         </div>
         <hr class="border-black my-2 w-full" />
         <div
-            class="flex flex-col p-3 nice-shadow shadow-lg border-2 border-black font-extrabold bg-[#161616]"
+            class="flex flex-col p-3 nice-shadow shadow-lg border-2 border-black font-extrabold bg-[#2B2B2B] rounded-xl"
         >
-            <p class="text-lg text-white mb-4">Technologies used:</p>
-            <div class="flex items-center gap-x-4 w-full">
-                {details.map((Icon) => <Icon class="size-8" />)}
+            <p class="text-lg mb-4 text-white">Technologies used:</p>
+            <div class="grid grid-cols-5 place-items-center gap-y-4 w-full">
+                {
+                    details.map(({ Icon, tooltip }) => (
+                        <Tooltip text={tooltip}>
+                            <Icon class="size-8 text-black" />
+                        </Tooltip>
+                    ))
+                }
             </div>
         </div>
     </div>

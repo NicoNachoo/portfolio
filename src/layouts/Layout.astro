@@ -15,7 +15,7 @@ const { title, description } = Astro.props;
 <html lang="es">
     <head>
         <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="description" content={description} />
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         <meta name="generator" content={Astro.generator} />
@@ -25,10 +25,9 @@ const { title, description } = Astro.props;
             href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap"
             rel="stylesheet"
         />
-        <link rel="stylesheet" href="../layout.css" />
         <title>{title}</title>
     </head>
-    <body>
+    <body id="begginning">
         <Header />
         <slot />
     </body>

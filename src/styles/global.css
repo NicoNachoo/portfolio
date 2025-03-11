@@ -2,11 +2,13 @@ html {
     font-family: "Public Sans", sans-serif;
     scroll-behavior: smooth;
     font-weight: bold;
-    background: repeating-linear-gradient(45deg,
-            #fcd2d2 0,
-            #fcd2d2 10px,
-            #fcd7d7 10px,
-            #fcd7d7 20px);
+    background: repeating-linear-gradient(
+        45deg,
+        #fcd2d2 0,
+        #fcd2d2 10px,
+        #fcd7d7 10px,
+        #fcd7d7 20px
+    );
 }
 
 body {
@@ -67,4 +69,30 @@ body {
 .underlined-text:hover::after {
     transform: scaleX(1);
     /* Fully visible on hover */
+}
+
+.tooltip-container {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip-bubble {
+    visibility: hidden;
+    position: absolute;
+    z-index: 1;
+    bottom: 135%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0;
+    opacity: 0;
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 0.25s;
+}
+
+.tooltip-bubble::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
 }

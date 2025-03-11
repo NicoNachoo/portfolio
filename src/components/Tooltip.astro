@@ -1,0 +1,42 @@
+---
+interface Props {
+    text: string;
+}
+
+const { text } = Astro.props;
+---
+
+<div class="tooltip-container">
+    <span class="tooltip-text">
+        <slot />
+    </span>
+    <span
+        class="tooltip-bubble bg-[#FCD7D7] border-2 border-black rounded-lg p-2 nice-shadow shadow-lg font-extrabold"
+    >
+        {text}
+    </span>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const tooltipContainers = document.querySelectorAll(".tooltip-container");
+
+        tooltipContainers.forEach((container) => {
+            const tooltipBubble = container.querySelector(".tooltip-bubble") as HTMLElement;
+
+            if (container && tooltipBubble) {
+                container.addEventListener("mouseenter", () => {
+                    tooltipBubble.style.visibility = "visible";
+                    tooltipBubble.style.fontSize = "1rem";
+                    tooltipBubble.style.opacity = "1";
+                });
+
+                container.addEventListener("mouseleave", () => {
+                    tooltipBubble.style.visibility = "hidden";
+                    tooltipBubble.style.fontSize = "0";
+                    tooltipBubble.style.opacity = "0";
+                });
+            }
+        });
+    });
+</script>
