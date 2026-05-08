@@ -6,7 +6,7 @@
 **Frontend Developer**  
 Valparaíso, Chile  
 **Available to Work**  
-**+7 years of experience**  
+**+9 years of experience**  
 
 📧 nico.torres.lopez@gmail.com  
 [LinkedIn](#) | [GitHub](#)
